@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <html lang="jp">
+
 <head>
     <!-- ⑥↓タイトルを変えてみよう -->
     <title>9/27課題</title>
     <!-- ⑤スタイルシートの設定をしよう -->
     <link rel="stylesheet" href="./css/style.css">
-     <!-- h1.htmlからある行をコピペしてくればOK -->
+    <!-- h1.htmlからある行をコピペしてくればOK -->
 </head>
+
 <body>
     <h1>GIT,HTMLについて</h1>
     <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
-    
+
     <div>
-    
+
         <h2>1.GIT</h2>
          <!-- ①↓に文字を書いてみよう -->
         GITとはファイルのバージョン管理が簡単にできるツールです。<br>
         難しく言うと分散型バージョン管理システムです。<br>
         バージョンとは簡単に言うとファイルの更新履歴のことです。<br>
-        とても眠たいので早く家に帰りたいです。<br>
-        こんばんは　おやすみなさい　おはようございます。<br>
-        あいうえお
+        誰が何を書き込み、削除したのか、どう変わったのかを履歴と <br>
+        して残しておき、いつでも確認したり、バージョンを戻すこと <br>
+        が可能です。<br>
+        
     </div>
     <div>
-         <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
-         画像を表示(30%)<br>
-         <img src="./images/testimage.png" width="30%"><br>
-         <img src="../images/0_XBlogo.png" width="8%">
-         <!-- ③↓に箇条書きをしてみよう -->
+        <h3>リポジトリ</h3>
+
+        GITを知るためにリポジトリという言葉は必須です。<br>
+        リポジトリとはファイルや履歴を保存するためのストレージの<br>
+        ことです。簡単に言うと保管庫です。リポジトリには二つあり<br>
+        リモートリポジトリとローカルリポジトリです。<br>
+        <img src="../images/20221003.jpg"><br>
+    
     </div>
     <div>
-     <ol>
-        <li>猫犬豚牛熊さる</li>
-        <li>今日はカープの勝ちです</li>
-    </ol>
-    </div>
-    <div>
-        <!-- ④↓に外部リンクを作ってみよう -->
+        <h3>基本アクション</h3>
+
+        GITにおける基本アクションはADD,COMMIT,PULL,PUSHの4つです。<br>
+        ADDとは編集したことをindexに登録する作業です。履歴を残す前<br>
+        の準備みたいなものです。<br>
+        COMMITとはADDを行った後、自分のローカルリポジトリに作業内容<br>
+        の履歴を保存する作業のことです<br>
+        PULLとは共有しているリモートリポジトリに保存されているファイ<br>
+        ルを、自分のローカルリポジトリに存在しないファイルや、他のユ<br>
+        ーザーが更新したファイルのみをダウンロードする機能です<br>
+        PUSHとはローカルリポジトリにあるファイルをリモートリポ<br>
+        ジトリにアップして保存する作業のことです。<br>
+    <br>
+        参考サイト
         <a href="https://qiita.com/a_goto/items/0fe40b17105d1ac1c40b" target="_blank"> (初心者向け)GITとは何か？GITの概念を解説</a><br>
-        <a href="../index.html">XBPトップページ</a><br>
-        <a href="https://www.yahoo.co.jp/" target="_blank">Yahoo</a><br>
-        <a href="./files/test.pdf" target="_blank">pdfファイル</a><br>
-        <a href="https://youtu.be/Fc5CFpDEwDg" target="_blank">BTS spring day YouTubeより</a>
     </div>
+    <div>
+
+        <h2>2.HTML</h2>
+
+        HTMLとはHyper Text Markup Languageの略称で、コンピュータが<br>
+        理解できる形で書かれた言語のことです。よく耳にするプログラミ<br>
+        ング言語とは違い、文字に目印やリンクをつけるためのマークアッ<br>
+        プ言語のことです。<br>
+
+    </div>
+    <div>
+
+        <h3>HTMLの仕組み</h3>
+
+        <img src="../images/202210032.jpg"><br>
+    
+        <br>
+        上の図の通り、見たいWebサイトのURLをクリックするとサイト表示<br>
+        のリクエストがサーバーに送られます。レスポンスとしてサーバー側<br>
+        で保管をしている該当のHTMLファイルをクライアントへと返します。<br>
+        そうすることでwebサイトが閲覧できます。<br>
+    
+    </div>
+    <div>
+        
+        <h3>webブラウザとHTMLファイルの見方</h3>
+
+        代表的なwebブラウザ、google chrome,safari,IE,firefox<br>
+        webブラウザ上で右クリックをして、下のほうにあるページのソース<br>
+        を表示をクリックするとコードを見ることができます。<br>
+    <br>
+        参考サイト<br>
+        <a href="https://web-pedia.net/dictionary/html/" target="_blank"> HTMLとは？(小学生にもわかりやすく解説) </a><br>
+        <br>
+        <a href="../index.html">XBPトップページ</a><br>
+        <a href="https://kuxbp.github.io/xbp/xbp2022/design_e12/">デザイン演習1,2トップページ</a><br>
+</div>
 
 </body>
+
 </html>
