@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>python.alerm</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="./css/style.css">
+     <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <h1>python2</h1>
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    
+    <div>
+         <!-- ①↓に文字を書いてみよう -->
+        <h2>アラーム</h2>
+        python内でアラームを設定して、任意の音を流せるものです。<br>
+        とても眠かったため思いつきました。<br>
+    </div>
+    <div>
+        <h2>ソースコード</h2>
+        変更箇所は音声,文字,回数です<br>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EEF;">import pygame.mixer</li>
+            <li style="background-color:#EFF;">import schedule</li>
+            <li style="background-color:#EEF;">import time</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">#アラーム処理</li>
+            <li style="background-color:#EEF;">def Alarm():</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">"起きろ仕事だ"</font>) #自由な言葉に変えられる</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">"\007"</font>)  #ビープ音</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;Sound()</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;exit()  </li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">#音再生処理</li>
+            <li style="background-color:#EFF;">def Sound():</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.init() #初期化</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.load(<font style="color:brown;">'alerm200.sd.mp3'</font>)  #好きな音声をmp3に変換して名前を横と一致させる</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.play(-2) #ループ再生（引数を2にすると2回のみ再生）</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;input()</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.stop() #終了</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">#目覚まし設定時間取得</li>
+            <li style="background-color:#EEF;">print(<font style="color:brown;">"目覚ましをセットする時間を指定してください"</font>)</li>
+            <li style="background-color:#EFF;">hour = input(<font style="color:brown;">"時間（hour）："</font>)</li>
+            <li style="background-color:#EEF;">minute = input(<font style="color:brown;">"分（minute）："</font>)</li>
+            <li style="background-color:#EFF;">target = f<font style="color:brown;">"{hour.zfill(2)}:{minute.zfill(2)}"</font></li>
+            <li style="background-color:#EEF;">print(target+<font style="color:brown;">"にアラームをセットしました"</font>)</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">#アラーム時間設定</li>
+            <li style="background-color:#EFF;">schedule.every().day.at(target).do(Alarm)</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">#アラーム待ち</li>
+            <li style="background-color:#EEF;">while True:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;schedule.run_pending()</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(1)</li>
+            </ol></code>
+    </div>
+    <div>
+        <h2>音声関連</h2>
+        以下のファイルや好みの音声ファイルをde12フォルダに移して、<br>
+        ファイル側とPython側の名称を一致させると流れます<br>
+        <a href="./alerm1.mp3">ふくろうか鳩？の音</a><br>
+        <a href="./alerm2.sd.mp3">spring day Taehyung.ver</a><br>
+
+    </div>
+    <div>
+        <h2>参考、使用</h2>
+        <!-- ④↓に外部リンクを作ってみよう -->
+        <a href="https://qiita.com/Rxxx/items/d1f7d9a08dacf693b0a9" target="_blank">アラーム</a><br>
+        <a href="https://www.bing.com/ck/a?!&&p=632e6b7daee004c8JmltdHM9MTY2NzY5MjgwMCZpZ3VpZD0xNWQ1YzU1NS05ZjVlLTY0MDUtMGE2MS1kNDMwOWUyNDY1MmEmaW5zaWQ9NTIxNQ&ptn=3&hsh=3&fclid=15d5c555-9f5e-6405-0a61-d4309e24652a&psq=mp3+%e5%a4%89%e6%8f%9b+youtube&u=a1aHR0cHM6Ly93d3cueTJtYXRlLmNvbS9qcC95b3V0dWJlLW1wMy9fR0txaTRwRkdvTQ&ntb=1" target="_blank">mp3変換</a><br>
+
+    </div>
+    <div>
+        簡単なものですが、気に入りました。<br>
+        通してpythonは難しくよくわかりませんでした。<br>
+        </div>
+    <div>
+        <a href="./index.html"> デザイン演習1・2トップページ</a><br>
+        <a href="../index.html">XBPトップページ</a><br>
+    </div>
+</body>
+</html>

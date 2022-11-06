@@ -5,15 +5,15 @@ import time
 
 #アラーム処理
 def Alarm():
-    print("仕事の時間です")
+    print("起きろ仕事だ") #自由な言葉に変えられる
     print("\007")  #ビープ音
     Sound()
-    exit()   #これがないと無限ループになるので注意
+    exit()  
 
 #音再生処理
 def Sound():
     pygame.mixer.init() #初期化
-    pygame.mixer.music.load('alerm1.mp3') #読み込み
+    pygame.mixer.music.load('alerm2.sd.mp3')  #好きな音声をmp3に変換して名前を横と一致させる
     pygame.mixer.music.play(-1) #ループ再生（引数を1にすると1回のみ再生）
     input()
     pygame.mixer.music.stop() #終了
