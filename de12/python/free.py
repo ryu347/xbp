@@ -13,8 +13,8 @@ def Alarm():
 #音再生処理
 def Sound():
     pygame.mixer.init() #初期化
-    pygame.mixer.music.load('alerm2.sd.mp3')  #好きな音声をmp3に変換して名前を横と一致させる
-    pygame.mixer.music.play(-1) #ループ再生（引数を1にすると1回のみ再生）
+    pygame.mixer.music.load('alerm200.sd.mp3')  #好きな音声をmp3に変換して名前を横と一致させる
+    pygame.mixer.music.play(-2) #ループ再生（引数を2すると2回のみ再生）
     input()
     pygame.mixer.music.stop() #終了
 
