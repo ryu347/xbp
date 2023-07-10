@@ -9,13 +9,16 @@ void setup() {
   pinMode(STEP, OUTPUT);
   digitalWrite(DIR, LOW);
   digitalWrite(STEP, LOW);
+
+  pinMode(13,OUTPUT);
+  Serial.begin(9600);  
 }
 
 void loop() {
 
-  if(Serial.available() < 0)}
+  if(Serial.available() < 0){
     from_pc = Serial.read();
-  }
+}
 
   if (from_pc=='1'){
     for (int i=0; i <= 3000; i++){
